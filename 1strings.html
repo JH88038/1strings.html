@@ -1,0 +1,53 @@
+<!-- Strings HTML Page By JennH -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Strings.Html</title> 
+    <style>
+        body {
+          font-family: 'Arial', sans-serif;
+          background-color: tan;
+        }
+        .center {
+          text-align: center;
+          padding: 20px;
+        }
+      </style>
+      
+      </head>
+<body>
+    
+    <h1>JennH's Palindrome Checker</h1>
+    
+    
+  
+</head>
+<body>
+  
+  <input type="text" id="word" placeholder="Enter Your Word or String">
+  <button type="button" id="check">CHECK</button>
+  <p id="result"></p>
+
+  <script>
+    const wordInput = document.getElementById('word');
+    const checkButton = document.getElementById('check');
+    const result = document.getElementById('result');
+
+    checkButton.addEventListener('click', () => {
+      const word = wordInput.value;
+      const reversedWord = word.split('').reverse().join('');
+
+      if (word === reversedWord) {
+        result.innerHTML = `${word} is a palindrome!`;
+      } else {
+        result.innerHTML = `${word} is not a palindrome.`;
+      }
+    });
+  </script>
+</body>
+</html>
